@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --app --src-dir --import-alias \"@/*\" --no-eslint --use-npm --yes)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --app --src-dir --import-alias \"@/*\" --no-eslint --use-npm --yes --name \"ai-dashboard\")",
+      "Read(//c/Users/91948/OneDrive/Documents/myCode/**)",
+      "Bash(npx create-next-app@latest ai-dashboard-temp --typescript --tailwind --app --src-dir --import-alias \"@/*\" --no-eslint --use-npm --yes)",
+      "Bash(cp -r ai-dashboard-temp/. AIDashboard/)",
+      "Bash(rm -rf ai-dashboard-temp)",
+      "Bash(curl -s -X POST http://localhost:3000/api/ideas -H \"Content-Type: application/json\" -d '{\"\"\"\"idea\"\"\"\":\"\"\"\"Test Idea\"\"\"\",\"\"\"\"description\"\"\"\":\"\"\"\"Test desc\"\"\"\",\"\"\"\"owner\"\"\"\":\"\"\"\"Test User\"\"\"\",\"\"\"\"lead\"\"\"\":\"\"\"\"Test Lead\"\"\"\",\"\"\"\"portfolio\"\"\"\":\"\"\"\"Security\"\"\"\",\"\"\"\"status\"\"\"\":\"\"\"\"IDEATION\"\"\"\",\"\"\"\"businessImpact\"\"\"\":\"\"\"\"Test impact\"\"\"\",\"\"\"\"ranking\"\"\"\":5,\"\"\"\"costEfficiency\"\"\"\":\"\"\"\"\"\"\"\",\"\"\"\"productivityIncrease\"\"\"\":0,\"\"\"\"ticketsReduced\"\"\"\":0,\"\"\"\"timeSaved\"\"\"\":\"\"\"\"\"\"\"\"}')",
+      "Bash(curl -s -X DELETE http://localhost:3000/api/ideas/16)",
+      "Bash(curl -s http://localhost:3000/api/ideas)",
+      "Bash(python -c \"import sys,json; data=json.load\\(sys.stdin\\); print\\(f''''{len\\(data\\)} ideas remain, max slNo={max\\(i[\"\"slNo\"\"] for i in data\\)}''''\\)\")",
+      "Bash(taskkill /PID 18528 /F)",
+      "Bash(npm run:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)"
+    ]
+  }
+}
